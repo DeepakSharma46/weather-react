@@ -1,0 +1,157 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.parent{
+    height: 100vh;
+    width: 100vw;
+    background: url("https://cdn.pixabay.com/photo/2023/05/22/10/49/houses-8010401_960_720.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cover{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.weatherContainer{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.65);
+    width: 400px;
+    padding: 15px;
+    box-shadow: 5px 5px 5px grey;
+    border-radius: 15px;
+    color: white;
+    row-gap: 15px;
+    top: -100px;
+
+    /* min-height: fit-content; */
+    min-width: 400px;
+    p{
+        color: white;
+        text-align: center;
+        font-weight: bold;
+    }
+}
+
+.inputCity{
+    padding: 15px;
+    border-radius: 5px;
+    border:none;
+    width: 100%;
+}
+.inputCity:focus{
+    border: 2px double goldenrod;
+    box-shadow: 5px 5px 5px gray;
+    font-weight: bold;
+}
+.getWeather{
+    padding: 8px;
+    width: 200px;
+    font-weight: bold;
+    font-family: cursive;
+    font-size: medium;
+    background-color: rgba(234, 155, 9, 0.905);
+    border-radius: 5px 10px 5px 10px;
+    cursor: pointer;
+
+}
+.getWeather:hover{
+    background-color: orange;
+    box-shadow: 4px 4px 2px gray;
+}
+label{
+    font-weight: 700;
+}
+
+.detailsContainer{
+    position: absolute;
+    bottom: 4rem;
+    left: 4rem;
+    /* background-color: rgba(0, 0, 0, 0.4); */
+    display: flex;
+    justify-content: space-around;
+    width: 90vw;
+    min-height: 20vh;
+    padding: 15px;
+    border-radius: 15px;
+    flex-wrap: wrap;
+
+}
+.iconimg,.tempContainer,.humidityContainer,.windContainer{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
+    font-weight: bold;
+    border-radius: 15px;
+    padding: 15px;
+    width: 200px;
+    border: 2px solid black;
+    box-shadow: 5px 5px 5px grey;
+    color: wheat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 135px;
+    p{
+        text-align: center;
+        margin: 12px;
+    }
+    h3{
+        text-align: center;
+        color: goldenrod;
+        font-weight: bold;
+    }
+    
+}
+.logoContainer{
+    height: 100px;
+    width: 150px;
+    position: absolute;
+    top: 50px;
+    background: url(../images/IMG_20250131_164047-removebg.png);
+    background-size: cover;
+    background-position: -30px 5px;
+    left: 3rem;
+    border: none;
+    background-repeat: no-repeat;
+    /* mix-blend-mode: color; */
+    /* background-color: gray; */
+    /* z-index: 5; */
+}
+
+@media (max-width:550px){
+    .weatherContainer{
+        top: -436px;
+        width:300px;
+    }
+    .detailsContainer{
+        top: 33rem;
+        left: auto;
+    }
+    .parent{
+        height: 170vh;
+    }
+    .cover{
+        height: 170vh;
+    }
+    .logoContainer{
+        left: auto;
+    }
+    
+}
