@@ -15,7 +15,7 @@ export function WeatherApp(){
 
 
     const weatherCheck=()=>{
-        axios.get(`http://api.weatherapi.com/v1/current.json?key=49142aba3bdd46ec9c4150813253001&q=${city}`).then((response)=>{
+        axios.get(`https://api.weatherapi.com/v1/current.json?key=49142aba3bdd46ec9c4150813253001&q=${city}`).then((response)=>{
             setIcon(response.data.current.condition.icon)
             setTemperature(response.data.current.temp_c +"°C")
             setWind(response.data.current.wind_kph +" km/hr")
