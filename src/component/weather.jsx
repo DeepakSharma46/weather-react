@@ -39,7 +39,7 @@ export function WeatherApp(){
             </div>
             <div className="weatherContainer">
                 <label>Enter Your City :-</label>
-                <input type="text" name="city" className="inputCity" placeholder="Hyderbad" onChange={(e)=>{
+                <input type="text" name="city" className="inputCity" placeholder="Rajasthan" onChange={(e)=>{
                     setCity(e.target.value)
                     setIsVisible(false)
                     }}/>

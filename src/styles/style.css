@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .parent{
@@ -32,13 +33,13 @@
     align-items: center;
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.65);
-    width: 400px;
+    /* width: 400px; */
     padding: 15px;
     box-shadow: 5px 5px 5px grey;
     border-radius: 15px;
     color: white;
     row-gap: 15px;
-    top: -100px;
+    /* top: -100px; */
 
     /* min-height: fit-content; */
     min-width: 400px;
@@ -137,21 +138,33 @@ label{
 
 @media (max-width:550px){
     .weatherContainer{
-        top: -436px;
-        width:300px;
+        top: -379px;
+        width:200px;
     }
     .detailsContainer{
         top: 33rem;
-        left: auto;
+        left: 2rem;
+        row-gap: 25px;
     }
     .parent{
         height: 170vh;
+        overflow: auto;
+        width: 110vw;
+        position: static;
     }
     .cover{
-        height: 170vh;
+        display: none;
     }
     .logoContainer{
         left: auto;
+    }
+    .iconimg,.tempContainer,.humidityContainer,.windContainer{
+        p{
+            color: white;
+        }
+    }
+    .inputCity{
+        width: 90%;
     }
     
 }
